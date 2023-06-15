@@ -1,0 +1,12 @@
+@charset ("UTF-8");
+
+body{background-color: rgb(250, 206, 229);
+    color: white;
+    font-size: 15px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+div{
+    background-color: black;
+}
+
