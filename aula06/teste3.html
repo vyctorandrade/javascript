@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste DOM</title>
+</head>
+<body>
+    <h1>Aqui será apresentado novo teste DOM</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis dolore beatae optio est distinctio ullam vitae voluptates, possimus labore odit ipsum. Odit nostrum dolorum itaque reprehenderit. Quasi magnam aliquid nobis!</p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed cum in obcaecati blanditiis aspernatur iure dolore. Nihil deleniti illum doloremque voluptatibus quasi tenetur sequi beatae repellat unde. Tenetur, quod? Magnam.
+
+    <div id="conteudo">
+        <p>Novo conteúdo em processamento...</p>
+
+    </div>
+
+
+
+
+
+    <script>
+        var nome = window.prompt('Digite o seu nome')
+        var fundo = document.getElementsByTagName('body')[0]
+        var cor = document.getElementsByTagName('h1') [0]
+        var conteudo = document.getElementById('conteudo')
+        var p = document.getElementsByTagName ('p') [1]
+        
+
+        window.document.write(`Olá, ${nome} .`)
+        fundo.style.backgroundColor = '#F444'
+        cor.style.color = 'white'
+        conteudo.style.backgroundColor = 'black'
+        p.style.color = 'white'
+        
+        
+        
+    </script>
+</body>
+</html>
