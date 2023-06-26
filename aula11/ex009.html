@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localidade</title>
+</head>
+<body>
+    <h1>Localidade</h1>
+
+    Qual País você está vivendo? <input type="text" name="textt" id="textt" >
+    <input type="button" value="Buscar" onclick="buscar">
+    <div id="res"></div>
+
+    <script>
+        function buscar(){
+            var text = document.getElementById('textt')
+            var res = document.getElementById('res')
+            res.innerText = `Você está vivendo no ${text}`
+            if(text != 'Brasil'){
+                innerText += `Você é estrangeiro`
+            } else {
+                innerText += `Você é brasileiro`
+            }
+
+        }
+    </script>
+</body>
+</html>
+
+
+<!-- Sem leitura. Fazer a verificação. -->
