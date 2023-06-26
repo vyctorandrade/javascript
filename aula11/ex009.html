@@ -8,19 +8,19 @@
 <body>
     <h1>Localidade</h1>
 
-    Qual País você está vivendo? <input type="text" name="textt" id="textt" >
-    <input type="button" value="Buscar" onclick="buscar">
+    Qual País você está vivendo? <input type="text" name="textt" id="textt" placeholder="Digite o nome do País" >
+    <input type="button" value="Enter" onclick= "buscar()">
     <div id="res"></div>
 
     <script>
         function buscar(){
             var text = document.getElementById('textt')
             var res = document.getElementById('res')
-            res.innerText = `Você está vivendo no ${text}`
+            res.innerHTML = `Você está vivendo no ${text}`
             if(text != 'Brasil'){
-                innerText += `Você é estrangeiro`
+                innerHTML += `Você é estrangeiro`
             } else {
-                innerText += `Você é brasileiro`
+                innerHTML += `Você é brasileiro`
             }
 
         }
@@ -30,3 +30,70 @@
 
 
 <!-- Sem leitura. Fazer a verificação. -->
+
+
+<!-- 
+@alexk10full
+há 2 meses
+Aqui está o meu "projetinho" brinquei um pouco com HTML e CSS, dava pra deixar mais organizado com mais algumas verificações porém para o que foi proposto o código já estava ficando muito grande (me empolguei), então resolvi deixar dessa forma.
+
+Obs: É a segunda vez que faço esse comentário, o primeiro acho que o próprio YT deletou por conter links. Eu usei um background(imagem de fundo) na página e usei uma outra imagem para criar as setas, mas como n vou poder postar links, basta vocês usarem suas próprias imagens no lugar da minha.
+
+===============================================================================
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+-------------
+HTML5:
+-------------
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="src/css/ex009.css" />
+        <title>Nacionalidade</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Sua Nacionalidade</h1>
+            <div class="textebox">
+                País <input type="text" id="country" placeholder="Seu Pais de Origem" />
+                <img src="src/images/reload.png" onclick="imgclick()" />
+            </div>
+            <input type="button" value="Verificar" id="button" onclick="verific()"/>
+            <p class="closed_p"></p>        
+        </div>
+        <script src="src/js/ex009.js"></script>
+    </body>
+</html> -->
+
+
+<!-- JavaScript:
+------------------
+
+function verific() {
+     const country = document.getElementById('country');
+     const p = document.querySelector('.closed_p');
+     p.classList.toggle('opened_p');
+     p.classList.toggle('closed_p');
+     country.value = country.value.toUpperCase();
+     if (country.value == "") {
+        p.innerHTML = `Valor <span class="error">INVALIDO!</span> Por favor clique nas setas ao lado da caixa de texto e digite qual o seu País de Orgigem`
+     } else if (country.value == "BRASIL") {
+        p.innerHTML = `País de origem <span class="brasil">${country.value}</span>: Você é <span class="brasil">Brasileiro!</span>`
+     } else {
+        p.innerHTML = `País de origem <span class="stranger">${country.value}</span>: Você é <span class="stranger">Estrangeiro!</span>`
+     }
+}
+
+function imgclick() {
+    const country = document.getElementById('country');
+    const p = document.querySelector('.opened_p');
+    p.classList.toggle('closed_p');
+    p.classList.toggle('opened_p');
+    if (country.value != "") {
+       country.value = ""
+    }
+} -->
