@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+body{
+    background-image: url('https://www.detran.ba.gov.br/img/icone-detran.svg');
+    background-color: darkgray;
+    background-position: top ;
+    background-repeat: no-repeat;
+    background-size: 30%;
+    margin-top: 200px ;
+   
+
+}
+
+#fundoprincipal{
+    background-color: black;
+    color: white;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 2px;
+}
+
+h1{
+    text-align: center;
+    
+}
+h2{
+    margin-top: -15px;
+    text-align: center;
+    font-size: 17px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
