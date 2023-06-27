@@ -6,15 +6,16 @@
     <title>calc</title>
 </head>
 <body>
-    <h1 style="text-align: center;">Calculadora</h1>
-    <h2 style="text-align: center;">Multiplicação</h2>
+    <h1 style="text-align: center;">Satisfação salarial</h1>
+    <h2 style="text-align: center;">Responda  ↴</h2>
 
 
     <div style="text-align: center;">
-   Digite o primeiro número <p> <input type="text" name="txtn1" id="txtn1">  </p>
-    Digite o segundo número <p></p><input type="text" name="txtn2" id="txtn2">
-    <p><input type="button" value="Calcular" onclick="resultado"></p>
-</div>
+      <br> Digite o seu nome  <br> <input type="text" name="nome" id="nome"> <br> <br>
+    Digite o seu salário <p> <input type="text" placeholder="R$" name="txtn1" id="txtn1">  </p>
+    Digite quanto é descontado <p></p><input type="text" placeholder="R$" name="txtn2" id="txtn2">
+    <p><input type="button" value="Calcular" onclick= "resultado()"></p>
+    </div>
 
     <div id="res"></div>
     
@@ -24,14 +25,12 @@
 
         
         function resultado(){
-            var n1 = Number(document.getElementById('txtn1').value) 
-            var n2 = Number(document.getElementById('txtn2').value)
-            var res = document.getElementById('res')
-            var s = n1 * n2
+            var nome = String(document.getElementById('nome').value)
+            var n1 = Number(document.getElementById('txtn1').value)
+            var n2 = Number(document.getElementById('txtn2').value)  
+            var s = n1 - n2
 
-            
-
-            res.innerHTML = `A multiplicação entre ${n1} e ${n2} é: ${s}`
+            res.innerHTML = `Olá ${nome} , você respondeu que atualmente ganha em torno de R$ ${n1} e os descontos no salário é de R$ ${n2}. Com isso você recebe um valor líquido de <strong> R$ ${s}. </strong> Está feliz com esse salário?` 
 
 
 
@@ -43,4 +42,3 @@
 </body>
 </html>
 
-<!-- Verificar o erro por não ler. -->
