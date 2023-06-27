@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calc</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Calculadora</h1>
+    <h2 style="text-align: center;">Multiplicação</h2>
+
+
+    <div style="text-align: center;">
+   Digite o primeiro número <p> <input type="text" name="txtn1" id="txtn1">  </p>
+    Digite o segundo número <p></p><input type="text" name="txtn2" id="txtn2">
+    <p><input type="button" value="Calcular" onclick="resultado"></p>
+</div>
+
+    <div id="res"></div>
+    
+
+
+    <script>
+
+        
+        function resultado(){
+            var n1 = Number(document.getElementById('txtn1').value) 
+            var n2 = Number(document.getElementById('txtn2').value)
+            var res = document.getElementById('res')
+            var s = n1 * n2
+
+            
+
+            res.innerHTML = `A multiplicação entre ${n1} e ${n2} é: ${s}`
+
+
+
+        }
+
+
+    </script>
+
+</body>
+</html>
+
+<!-- Verificar o erro por não ler. -->
