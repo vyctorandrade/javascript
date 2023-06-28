@@ -6,22 +6,83 @@
     <title>calc</title>
 </head>
 <body>
+
+    <style>
+        body{
+            background-color: rgba(240, 255, 255, 0.74);
+            color: chocolate;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        h1{
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+    </style>
     <h1 style="text-align: center;">Satisfação salarial</h1>
     <h2 style="text-align: center;">Responda  ↴</h2>
 
-
+    <!-- Pergunta  -->
     <div style="text-align: center;">
       <br> Digite o seu nome  <br> <input type="text" name="nome" id="nome"> <br> <br>
     Digite o seu salário <p> <input type="text" placeholder="R$" name="txtn1" id="txtn1">  </p>
     Digite quanto é descontado <p></p><input type="text" placeholder="R$" name="txtn2" id="txtn2">
     <p><input type="button" value="Calcular" onclick= "resultado()"></p>
+    <div id="res"></div>
     </div>
 
-    <div id="res"></div>
+    <!-- Condição -->
+    <div style="text-align: center; margin-top: 3vh;">    
+    <input type="button" value="Informe aqui" onclick="resposta()" >
+    <input type="text" name="cond" id="cond" placeholder="Sim ou Não" >
+    <div id="resposta"></div>
+    </div>
+        
+    
+
+    
     
 
 
     <script>
+        function resultado(){
+            var nome = document.getElementById('nome').value
+            var n1 = Number(document.getElementById('txtn1').value)
+            var n2 = Number(document.getElementById('txtn2').value)  
+            var s = n1 - n2
+
+            res.innerHTML = `Olá ${nome} , você respondeu que atualmente ganha em torno de R$ ${n1} certo? e que tem descontos no salário que totaliza uma perca de R$ ${n2}. Com isso você recebe um valor líquido de <strong> R$ ${s} </strong>. ` 
+            res.innerHTML += `<br> <br>Você está satisfeito(a) em receber esse valor?`
+        }
+        
+        function resposta(){
+        var cond = document.getElementById('cond').value
+        var resposta = document.getElementById('resposta')
+        if(cond == 'Não'){
+            resposta.innerHTML = `<br> Muito bem! Então faça a gentileza a si mesmo e vá estudar que algo melhor virá. Pois você tem muito potencial! 🚀`
+        } else {
+            resposta.innerHTML = `<br> Ihh, já vi que você está acomodado. Não vá pelo esse caminho! Procure sempre o melhor. Pois vejo um futuro brilhante em você. 🌎`
+        }
+        
+        
+
+        }
+    
+    
+    
+    
+    
+    </script>
+
+
+
+</body>
+</html>
+
+<!-- Criar a parte de condição Está feliz com esse salário?
+if e else -->
+
+
+
+<!--  <script>
 
         
         function resultado(){
@@ -30,17 +91,9 @@
             var n2 = Number(document.getElementById('txtn2').value)  
             var s = n1 - n2
 
-            res.innerHTML = `Olá ${nome} , você respondeu que atualmente ganha em torno de R$ ${n1} certo? e que tem descontos no salário que totaliza uma perca de R$ ${n2}. Com isso você recebe um valor líquido de <strong> R$ ${s}. </strong>` 
-
-
-
+            res.innerHTML = `Olá ${nome} , você respondeu que atualmente ganha em torno de R$ ${n1} certo? e que tem descontos no salário que totaliza uma perca de R$ ${n2}. Com isso você recebe um valor líquido de <strong> R$ ${s} </strong>. ` 
+            res.innerHTML += `<br> <br>Você está satisfeito(a) em receber esse valor? <br> Caso a resposta foi não, <strong> clique aqui </strong> agora mesmo! `
         }
 
 
-    </script>
-
-</body>
-</html>
-
-<!-- Criar a parte de condição Está feliz com esse salário?
-if e else -->
+    </script> -->
