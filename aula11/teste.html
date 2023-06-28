@@ -30,7 +30,8 @@
     </div>
 
     <!-- Condição -->
-    <div style="text-align: center; margin-top: 3vh;">    
+    <div style="text-align: center; margin-top: 3vh;"> 
+        
     <input type="button" value="Informe aqui" onclick="resposta()" >
     <input type="text" name="cond" id="cond" placeholder="Sim ou Não" >
     <div id="resposta"></div>
@@ -58,8 +59,10 @@
         var resposta = document.getElementById('resposta')
         if(cond == 'Não'){
             resposta.innerHTML = `<br> Muito bem! Então faça a gentileza a si mesmo e vá estudar que algo melhor virá. Pois você tem muito potencial! 🚀`
-        } else {
+        } else if (cond == 'Sim') {
             resposta.innerHTML = `<br> Ihh, já vi que você está acomodado. Não vá pelo esse caminho! Procure sempre o melhor. Pois vejo um futuro brilhante em você. 🌎`
+        } else {
+            resposta.innerHTML = `Você precisa informar se está satisfeito ou não.`
         }
         
         
