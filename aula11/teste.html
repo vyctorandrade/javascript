@@ -32,8 +32,8 @@
     <!-- Condição -->
     <div style="text-align: center; margin-top: 3vh;"> 
         
-    <input type="button" value="Informe aqui" onclick="resposta()" >
-    <input type="text" name="cond" id="cond" placeholder="Sim ou Não" >
+    <input type="button" value="Informe aqui"  onclick="resposta()" >
+    <input type="text" name="cond" id="cond"  placeholder="Sim ou Não" >
     <div id="resposta"></div>
     </div>
         
@@ -50,9 +50,14 @@
             var n2 = Number(document.getElementById('txtn2').value)  
             var s = n1 - n2
 
-            res.innerHTML = `Olá ${nome} , você respondeu que atualmente ganha em torno de R$ ${n1} certo? e que tem descontos no salário que totaliza uma perca de R$ ${n2}. Com isso você recebe um valor líquido de <strong> R$ ${s} </strong>. ` 
-            res.innerHTML += `<br> <br>Você está satisfeito(a) em receber esse valor?`
-        }
+            if(nome == s){
+                res.innerHTML = `Você precisa digitar os campos acima.`
+            } else {
+                res.innerHTML = `Olá ${nome} , você respondeu que atualmente ganha em torno de R$ ${n1} certo? e que tem descontos no salário que totaliza uma perca de R$ ${n2}. Com isso você recebe um valor líquido de <strong> R$ ${s} </strong>. ` 
+                res.innerHTML += `<br> <br>Você está satisfeito(a) em receber esse valor?`
+            }   
+            }
+        
         
         function resposta(){
         var cond = document.getElementById('cond').value
