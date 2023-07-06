@@ -4,15 +4,17 @@ function verificar(){
     var ano = data.getFullYear()
     var fano = Number(document.getElementById('txtano').value)
     var res = document.getElementById('res')
-    var idade = ano - fano
     var fsex = document.getElementsByName('radsex')
+    var idade = ano - fano
     var genero = ''
     var img = document.getElementById('foto')
+    
+   
     
     // Nesse if se o ano que for digitado for maior que o ano atual da a mesnagem de erro
     if (fano.length == 0 || (fano) > ano){
         window.alert(`[ERRO] Verifique os dados e tente novamente!`)
-    }if(fsex[0].checked){
+     }if(fsex[0].checked){
         genero = 'Homem'
         if(idade >=0 && idade <10){
             // Criança
@@ -23,7 +25,7 @@ function verificar(){
         }else if ( idade <50){
             // Adulto
             img.src = '../idade/src/imagens/foto-homemadulto.png'
-        } else{
+        } else {
             // Idoso
             img.src = '../idade/src/imagens/foto-homemidoso.png'
         }
