@@ -1,4 +1,4 @@
-prompt(`Olá, seja bem vindo! Instruções para o super contador: 1° digite o número que quer iniciar a contagem. 2° Agora o número final, ele será o fim da contagem. 3° Por fim de quantas em quantas casas irá pular.`)
+window.confirm(`Olá, seja bem vindo! Instruções para o super contador: 1° digite o número que quer iniciar a contagem. 2° Agora o número final, ele será o fim da contagem. 3° Por fim de quantas em quantas casas irá pular.`)
 function contar(){
     let inicio = document.getElementById('inicio')
     let fim = document.getElementById ('fim')
