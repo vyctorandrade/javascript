@@ -11,35 +11,38 @@
         <h1>Vamos contar</h1>
     </header>
     <main>
-        <article id="dados">
+        <section id="dados">
 
             <div id="linha1" class="bloco">
             <label for="inicio">Início: </label>
-            <input type="text" name="inicio" id="inicio">
+            <input  type="number" name="inicio" id="inicio" placeholder="Ínicio da contagem">
             </div>
             
-            <div id="linha2" class="bloco">
+           <br> <div id="linha2" class="bloco">
             <label for="fim">Fim: </label>
-            <input type="text" name="fim" id="fim">
+            <input type="number" name="fim" id="fim" placeholder="Final da contagem">
             </div>
 
-            <div id="linha3" class="bloco">
+          <br>  <div id="linha3" class="bloco">
             <label for="passo">Passo: </label>
-            <input type="text" name="passo" id="passo">
+            <input type="number" name="passo" id="passo" placeholder="Escolha quantos passos">
             </div>
             
-            <div id="botao">
-            <input type="button" value="Contar">
-            </div>
+        
+            <input id="botao" type="button" value="Contar" onclick="contar()">
             
-            <div id="res"></div>
-        </article>
-              
-        
-        
+            
+            <div id="res">
+                <br>Preparando a contagem...</p>
+            </div>
+        </section>
+
     </main>
+   
     <footer>
         <p>&#169; CursoemVideo</p>
     </footer>
+
+    <script src="../ex01/scripts/script.js"></script>
 </body>
 </html>
