@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    background-color: rgb(102, 167, 241);
+    
+    
+}
+
+header{
+    margin-top: 70px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+
+article#dados{
+    background-color: white;
+    
+    padding: 25px 15px 25px 10px;
+    margin: 30px;
+}
+
+ input#botao{
+    margin-top: 20px;
+}
+
