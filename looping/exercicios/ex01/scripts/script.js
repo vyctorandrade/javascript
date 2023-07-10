@@ -1,28 +1,31 @@
-window.confirm(`Olá, seja bem vindo! Instruções para o super contador: 1° digite o número que quer iniciar a contagem. 2° Agora o número final, ele será o fim da contagem. 3° Por fim de quantas em quantas casas irá pular.`)
+window.confirm(`Olá, seja bem vindo! Instruções para o super contador: 
+1° Digite o número que quer iniciar a contagem.  
+2° Agora o número final, ele será o fim da contagem. 
+3° Por fim de quantas em quantas casas irá pular.`)
 function contar(){
-    let inicio = document.getElementById('inicio')
-    let fim = document.getElementById ('fim')
-    let passo = document.getElementById ('passo')
-    let res = document.getElementById ('res')
+    var inicio = Number(document.getElementById('inicio').value)
+    var fim = Number(document.getElementById ('fim').value)
+    var passo = Number (document.getElementById ('passo').value)
+    var res = document.getElementById ('res')
 
-    if (inicio.value == 0 || fim.value == 0 || passo.value == 0 ){
+    if (inicio == 0 || fim == 0 || passo == 0 ){
         // Pode por em mensagem na tela junto // res.innerHTML = `Impossível contar!`
         window.alert('[Erro] Faltam dados!')
     } else {
         res.innerHTML = 'Contando:'
-        let i = Number(inicio.value)
-        let f = Number(fim.value)
-        let p = Number (passo.value)
+        var i = inicio
+        var f = fim
+        var p = passo
 
         if (i < f){
             // contagem crescente
-            for(let c = i; c <= f; c+=p){
+            for(var c = i; c <= f; c+=p){
                 res.innerHTML += `${c} \u{1F449} `
             }
            
     } else {
         // Contagem refressiva
-        for (let c = i; c >= f; c-= p){
+        for (var c = i; c >= f; c-= p){
             res.innerHTML += `${c} \u{1F449} `
          }
         
