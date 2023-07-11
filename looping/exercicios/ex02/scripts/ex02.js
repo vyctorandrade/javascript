@@ -1,3 +1,4 @@
+
 function tabuada (){
     var numero = Number(document.getElementById('inumero').value)
     var tab = document.getElementById('seltab')
@@ -20,3 +21,4 @@ function tabuada (){
 
 
 }
+
